@@ -12,9 +12,9 @@
   </head>
 
   <body>
-    <%= render 'utilities/header' %>
+    <%= render 'utilities/header' if user_signed_in? %>
     <%= yield %>
 
-    <%= render 'utilities/footer' %>
+    <%= render 'utilities/footer' if user_signed_in? %>
   </body>
 </html>
