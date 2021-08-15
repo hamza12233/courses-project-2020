@@ -1,6 +1,10 @@
 class Course < ApplicationRecord
-  ATTRIBUTE_WHITELIST= %i[
-    title,
-    description
+  ATTRIBUTE_WHITELIST= [
+    :title,
+    :description
   ].freeze
+
+  validates :title, presence: true
+
+  belongs_to :user
 end
