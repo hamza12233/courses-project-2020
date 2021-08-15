@@ -1,6 +1,10 @@
 class CoursesController < ApplicationController
   before_action :find_course, only: %i[show edit update]
 
+  def index
+    @courses = Course.all
+  end
+
   def new
     @course = Course.new
   end
