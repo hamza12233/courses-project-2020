@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'do-not-reply@herokuapp.com'
+  default from: 'hamza.saleem@evoke.team'
   layout 'mailer'
 end
