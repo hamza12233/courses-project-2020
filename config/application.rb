@@ -12,19 +12,18 @@ module CoursesProject
     config.load_defaults 6.1
 
 
-    config.action_mailer.raise_delivery_errors = false
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = { host: 'courses-2020.herokuapp.com', protocol: 'https' }
 
-    ActionMailer::Base.smtp_settings = {
-      user_name: ENV['SENDGRID_USERNAME'],
-      password: ENV['SENDGRID_PASSWORD'],
-      domain: 'herokuapp.com',
-      address: 'smtp.sendgrid.net',
-      port: 587,
-      authentication: :plain,
-      enable_starttls_auto: true
+    config.action_mailer.default_url_options = { host: 'courses-2020.herokuapp.com', protocol: 'https' }
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.smtp_settings = {
+      :user_name => ENV['SENDGRID_USERNAME'],
+      :password => ENV['SENDGRID_PASSWORD'],
+      :domain => 'herokuapp.com',
+      :address => 'smtp.sendgrid.net',
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
     }
     # Configuration for the application, engines, and railties goes here.
     #
