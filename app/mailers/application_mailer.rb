@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'hamza.saleem@evoke.team'
+  default from: 'from.email@gamil.com'
   layout 'mailer'
 end
